@@ -1,11 +1,6 @@
 from django.db import models
 
-# Create your models here.
-import uuid
-#from presentations import settings.base
-# Create your models here.
 
-#DATE_INPUT_FORMATS = ['%m-%d-%Y']
 
 class Creator(models.Model):
     name = models.CharField( max_length=50)
@@ -16,7 +11,7 @@ class Creator(models.Model):
 
 
 class Presentation(models.Model):
-    ident = models.CharField(max_length=25, blank=True,null=True)
+    ident = models.CharField(verbose_name='id',max_length=25, blank=True,null=True)
     
     title = models.CharField( max_length=50)
     thumbnail = models.URLField( max_length=200)

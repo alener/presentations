@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/node_modules/primeicons/primeicons.css" />
+<link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/themes/nova-light/theme.css" />
+<link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/primeng.min.css" />
+</head>
+<body>
+  <p-orderList [value]="cars" [listStyle]="{'height':'250px'}" header="Cars" 
+    filter="filter" filterBy="brand" filterPlaceholder="Filter by brand" dragdrop="true">
+    <ng-template let-car pTemplate="item">
+        <div class="ui-helper-clearfix">
+            <img src="assets/showcase/images/demo/car/{{car.brand}}.png" style="display:inline-block;margin:2px 0 2px 2px" width="48">
+            <div style="font-size:14px;float:right;margin:15px 5px 0 0">{{car.brand}} - {{car.year}} - {{car.color}}</div>
+        </div>
+    </ng-template>
+</p-orderList>
+
+</body>
+</html>
+
+
+
+
+
+<router-outlet></router-outlet>
